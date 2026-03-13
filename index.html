@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FixPrime - Sua loja de materiais de construcao com os melhores precos e qualidade. Entrega rapida e atendimento personalizado.">
+  <meta name="theme-color" content="#ff6a00">
+  <title>FixPrime - Materiais de Construcao de Qualidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-left">
+          <button class="menu-btn" id="menuBtn" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menuIcon">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+          </button>
+          <a href="#" class="logo">
+    <img src="assets/logofp.png" alt="Logo da loja" class="logo-img">
+</a>
+        </div>
+        
+        <nav class="desktop-nav">
+          <a href="#home" class="nav-link">Inicio</a>
+          <a href="#produtos" class="nav-link">Produtos</a>
+<!--           <a href="#marcas" class="nav-link">Marcas</a> -->
+          <a href="#ofertas" class="nav-link">Ofertas</a>
+          <a href="#contato" class="nav-link">Contato</a>
+        </nav>
+        
+        <div class="header-right">
+          <div class="search-bar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            <input type="text" placeholder="Buscar produtos..." id="searchInput">
+          </div>
+          
+          <button class="icon-btn mobile-search-btn" id="mobileSearchBtn" aria-label="Buscar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </button>
+          
+          <button class="icon-btn cart-btn" id="cartBtn" aria-label="Carrinho de compras">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1"></circle>
+              <circle cx="19" cy="21" r="1"></circle>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+          
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="cta-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span class="cta-text-short">Contato</span>
+            <span class="cta-text-long">Central de Atendimento</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-content">
+        <div class="mobile-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input type="text" placeholder="Buscar produtos..." id="mobileMenuSearchInput">
+        </div>
+        <nav class="mobile-nav">
+          <a href="#home" class="mobile-nav-link">Inicio</a>
+          <a href="#produtos" class="mobile-nav-link">Produtos</a>
+          <a href="#marcas" class="mobile-nav-link">Marcas</a>
+          <a href="#ofertas" class="mobile-nav-link">Ofertas</a>
+          <a href="#contato" class="mobile-nav-link">Contato</a>
+        </nav>
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="mobile-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Central de Atendimento
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2 class="cart-title">Carrinho de Compras</h2>
+        <button class="cart-close" id="cartClose" aria-label="Fechar carrinho">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-content" id="cartContent">
+        <div class="cart-empty" id="cartEmpty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          <p>Seu carrinho esta vazio</p>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display: none;">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span class="cart-total-value" id="cartTotal">R$ 0,00</span>
+        </div>
+        <button class="cart-checkout-btn" id="cartCheckout">
+          Prosseguir para pagamento
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Spacer -->
+  <div class="header-spacer"></div>
+  
+  <!-- Benefits Bar -->
+  <div class="benefits-bar">
+    <div class="benefits-track" id="benefitsTrack">
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+          <path d="M15 18H9"></path>
+          <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+          <circle cx="17" cy="18" r="2"></circle>
+          <circle cx="7" cy="18" r="2"></circle>
+        </svg>
+        <span>Frete Gratis acima de R$ 299</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z"></path>
+          <path d="M2 9v1c0 1.1.9 2 2 2h1"></path>
+          <path d="M16 11h0"></path>
+        </svg>
+        <span>Descontos para profissionais</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>Entrega em toda regiao</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+          <line x1="2" x2="22" y1="10" y2="10"></line>
+        </svg>
+        <span>Parcele em ate 12x</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+          <path d="m9 12 2 2 4-4"></path>
+        </svg>
+        <span>Compra 100% segura</span>
+      </div>
+      <!-- Duplicated for seamless scroll -->
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+          <path d="M15 18H9"></path>
+          <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+          <circle cx="17" cy="18" r="2"></circle>
+          <circle cx="7" cy="18" r="2"></circle>
+        </svg>
+        <span>Frete Gratis acima de R$ 299</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z"></path>
+          <path d="M2 9v1c0 1.1.9 2 2 2h1"></path>
+          <path d="M16 11h0"></path>
+        </svg>
+        <span>Descontos para profissionais</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>Entrega em toda regiao</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+          <line x1="2" x2="22" y1="10" y2="10"></line>
+        </svg>
+        <span>Parcele em ate 12x</span>
+      </div>
+      <div class="benefit-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+          <path d="m9 12 2 2 4-4"></path>
+        </svg>
+        <span>Compra 100% segura</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Carousel -->
+  <section class="carousel" id="home">
+    <div class="carousel-inner" id="carouselInner">
+      <div class="carousel-slide active" data-index="0">
+        <div class="slide-content">
+          <div class="slide-image-container">
+            <img src="" alt="Banner Ferramentas Profissionais" class="slide-image" data-slide="0">
+          </div>
+          <div class="slide-overlay">
+            <div class="container">
+              <div class="slide-text">
+                <span class="slide-badge">Ate 30% de desconto</span>
+                <h1 class="slide-title">Ferramentas Profissionais</h1>
+                <p class="slide-desc">As melhores marcas para sua obra</p>
+                <button class="slide-btn" data-category="ferramentas">Ver Ofertas</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-slide" data-index="1">
+        <div class="slide-content">
+          <div class="slide-image-container">
+            <img src="" alt="Banner Material Eletrico" class="slide-image" data-slide="1">
+          </div>
+          <div class="slide-overlay">
+            <div class="container">
+              <div class="slide-text">
+                <span class="slide-badge">Lancamentos 2026</span>
+                <h1 class="slide-title">Material Eletrico</h1>
+                <p class="slide-desc">Seguranca e qualidade garantida</p>
+                <button class="slide-btn" data-category="eletrico">Ver Ofertas</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-slide" data-index="2">
+        <div class="slide-content">
+          <div class="slide-image-container">
+            <img src="" alt="Banner Tintas e Acabamentos" class="slide-image" data-slide="2">
+          </div>
+          <div class="slide-overlay">
+            <div class="container">
+              <div class="slide-text">
+                <span class="slide-badge">Compre 3 pague 2</span>
+                <h1 class="slide-title">Tintas e Acabamentos</h1>
+                <p class="slide-desc">Cores que transformam ambientes</p>
+                <button class="slide-btn" data-category="tintas">Ver Ofertas</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-arrow prev" id="carouselPrev" aria-label="Slide anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 18-6-6 6-6"></path>
+      </svg>
+    </button>
+    <button class="carousel-arrow next" id="carouselNext" aria-label="Proximo slide">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+    </button>
+    <div class="carousel-dots" id="carouselDots">
+      <button class="carousel-dot active" data-index="0" aria-label="Ir para slide 1"></button>
+      <button class="carousel-dot" data-index="1" aria-label="Ir para slide 2"></button>
+      <button class="carousel-dot" data-index="2" aria-label="Ir para slide 3"></button>
+    </div>
+  </section>
+  
+  <!-- Brands Section -->
+  
+<!--   <section class="brands-section" id="marcas">
+    <div class="container">
+      <h2 class="section-title">Marcas <span>Parceiras</span></h2>
+      <div class="brands-grid">
+        <div class="brand-item">BOSCH</div>
+        <div class="brand-item">DEWALT</div>
+        <div class="brand-item">MAKITA</div>
+        <div class="brand-item">TRAMONTINA</div>
+        <div class="brand-item">STANLEY</div>
+        <div class="brand-item">BLACK+DECKER</div>
+      </div>
+    </div>
+  </section> -->
+  
+  <!-- Offers Section -->
+  <section class="offers-section" id="ofertas">
+    <div class="container">
+      <div class="offers-header">
+        <div>
+          <h2 class="offers-title">Ofertas <span>Imperdiveis</span></h2>
+          <p class="offers-subtitle">Aproveite descontos exclusivos por tempo limitado</p>
+        </div>
+        <div class="offers-timer-container">
+          <div class="offers-timer-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Oferta termina em:</span>
+          </div>
+          <div class="offers-timer-boxes">
+            <div class="timer-box">
+              <span class="timer-value" id="timerDays">00</span>
+              <span class="timer-unit">Dias</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-box">
+              <span class="timer-value" id="timerHours">00</span>
+              <span class="timer-unit">Horas</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-box">
+              <span class="timer-value" id="timerMinutes">00</span>
+              <span class="timer-unit">Min</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-box">
+              <span class="timer-value" id="timerSeconds">00</span>
+              <span class="timer-unit">Seg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card gradient-1" data-category="ferramentas">
+          <div class="offer-bg-pattern">
+            <div class="offer-bg-circle-1"></div>
+            <div class="offer-bg-circle-2"></div>
+          </div>
+          <div class="offer-content">
+            <span class="offer-badge">Ate 30% OFF</span>
+            <h3 class="offer-title">Ferramentas Eletricas</h3>
+            <p class="offer-desc">Furadeiras, serras e muito mais</p>
+            <button class="offer-btn" data-category="ferramentas">
+              Ver Ofertas
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="offer-card gradient-2" data-category="hidraulico">
+          <div class="offer-bg-pattern">
+            <div class="offer-bg-circle-1"></div>
+            <div class="offer-bg-circle-2"></div>
+          </div>
+          <div class="offer-content">
+            <span class="offer-badge">Ate 25% OFF</span>
+            <h3 class="offer-title">Material Hidraulico</h3>
+            <p class="offer-desc">Tubos, conexoes e registros</p>
+            <button class="offer-btn" data-category="hidraulico">
+              Ver Ofertas
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="offer-card gradient-3" data-category="tintas">
+          <div class="offer-bg-pattern">
+            <div class="offer-bg-circle-1"></div>
+            <div class="offer-bg-circle-2"></div>
+          </div>
+          <div class="offer-content">
+            <span class="offer-badge">Ate 40% OFF</span>
+            <h3 class="offer-title">Tintas Premium</h3>
+            <p class="offer-desc">Compre 3 e leve 4</p>
+            <button class="offer-btn" data-category="tintas">
+              Ver Ofertas
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Products Section -->
+  <section class="products-section" id="produtos">
+    <div class="container">
+      <h2 class="section-title">Nossos <span>Produtos</span></h2>
+      
+      <!-- Filters -->
+      <div class="filters">
+        <div class="filter-group">
+          <label class="filter-label" for="brandFilter">Marca</label>
+          <select class="filter-select" id="brandFilter">
+            <option value="all">Todas as marcas</option>
+            <option value="bosch">Bosch</option>
+            <option value="dewalt">DeWalt</option>
+            <option value="makita">Makita</option>
+            <option value="tramontina">Tramontina</option>
+            <option value="stanley">Stanley</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="priceFilter">Faixa de Preco</label>
+          <select class="filter-select" id="priceFilter">
+            <option value="all">Todos os precos</option>
+            <option value="low">Ate R$ 100</option>
+            <option value="mid">R$ 100 - R$ 500</option>
+            <option value="high">Acima de R$ 500</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="categoryFilter">Categoria</label>
+          <select class="filter-select" id="categoryFilter">
+            <option value="all">Todas as categorias</option>
+            <option value="ferramentas">Ferramentas</option>
+            <option value="eletrico">Material Eletrico</option>
+            <option value="hidraulico">Material Hidraulico</option>
+            <option value="tintas">Tintas</option>
+            <option value="iluminacao">Iluminacao</option>
+          </select>
+        </div>
+        <div class="filter-clear">
+          <button class="filter-clear-btn" id="clearFilters">Limpar Filtros</button>
+        </div>
+      </div>
+      
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+  
+  <!-- Product Modal (Desktop) -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+      <div class="modal-grid">
+        <div class="modal-gallery">
+          <div class="modal-main-image">
+            <div class="modal-image-placeholder" id="modalImagePlaceholder">
+              <img src="" alt="Imagem do produto" id="modalProductImage" style="display: none; width: 100%; height: 100%; object-fit: contain; border-radius: 0.75rem;">
+            </div>
+            <button class="modal-gallery-arrow prev" id="modalPrevImage" aria-label="Imagem anterior">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+            </button>
+            <button class="modal-gallery-arrow next" id="modalNextImage" aria-label="Proxima imagem">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-thumbnails" id="modalThumbnails">
+            <button class="modal-thumbnail active" data-index="0">1</button>
+            <button class="modal-thumbnail" data-index="1">2</button>
+            <button class="modal-thumbnail" data-index="2">3</button>
+            <button class="modal-thumbnail" data-index="3">4</button>
+          </div>
+        </div>
+        <div class="modal-details">
+          <p class="modal-brand" id="modalBrand">BOSCH</p>
+          <h2 class="modal-name" id="modalName">Furadeira de Impacto 750W</h2>
+          <div class="modal-price-section">
+            <div class="modal-price-row">
+              <span class="modal-price-current" id="modalPrice">R$ 349,90</span>
+              <span class="modal-price-original" id="modalOriginalPrice">R$ 449,90</span>
+            </div>
+            <span class="modal-discount" id="modalDiscount">22% de desconto</span>
+            <p class="modal-installments" id="modalInstallments">ou 12x de R$ 29,16 sem juros</p>
+          </div>
+          
+          <!-- Color Selection -->
+          <div class="modal-colors">
+            <h3 class="modal-section-title">Cor</h3>
+            <div class="color-options" id="colorOptions">
+              <button class="color-option active" data-color="Padrao" style="background-color: #1a1a1a;" title="Padrao"></button>
+              <button class="color-option" data-color="Azul" style="background-color: #2563eb;" title="Azul"></button>
+              <button class="color-option" data-color="Vermelho" style="background-color: #dc2626;" title="Vermelho"></button>
+            </div>
+            <span class="selected-color" id="selectedColor">Cor selecionada: Padrao</span>
+          </div>
+          
+          <div class="modal-description">
+            <h3 class="modal-section-title">Descricao</h3>
+            <p class="modal-section-text" id="modalDescription">Produto de alta qualidade da marca Bosch. Ideal para profissionais e entusiastas que buscam o melhor em materiais de construcao. Garantia de 12 meses direto com o fabricante.</p>
+          </div>
+          <div class="modal-features">
+            <h3 class="modal-section-title">Caracteristicas</h3>
+            <ul class="modal-features-list" id="modalFeaturesList">
+              <li><strong>Cor:</strong> <span id="featureColor">Padrao</span></li>
+              <li><strong>Marca:</strong> <span id="featureBrand">Bosch</span></li>
+              <li><strong>Categoria:</strong> <span id="featureCategory">Ferramentas</span></li>
+              <li><strong>Garantia:</strong> 12 meses</li>
+              <li><strong>Origem:</strong> Produto original</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-add-cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1"></circle>
+                <circle cx="19" cy="21" r="1"></circle>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+              </svg>
+              Adicionar ao Carrinho
+            </button>
+            <button class="modal-favorite-btn" id="modalFavorite">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Bottom Sheet Modal -->
+  <div class="mobile-sheet-overlay" id="mobileSheet">
+    <div class="mobile-sheet-backdrop" id="mobileSheetBackdrop"></div>
+    <div class="mobile-sheet-panel">
+      <div class="mobile-sheet-handle"></div>
+      <div class="mobile-sheet-header">
+        <div class="mobile-sheet-product-preview">
+          <div class="mobile-sheet-image" id="mobileSheetImage"></div>
+          <div class="mobile-sheet-info">
+            <p class="mobile-sheet-brand" id="mobileSheetBrand">BOSCH</p>
+            <h3 class="mobile-sheet-name" id="mobileSheetName">Furadeira de Impacto 750W</h3>
+            <div class="mobile-sheet-price-row">
+              <span class="mobile-sheet-price" id="mobileSheetPrice">R$ 349,90</span>
+              <span class="mobile-sheet-original-price" id="mobileSheetOriginalPrice">R$ 449,90</span>
+            </div>
+          </div>
+        </div>
+        <button class="mobile-sheet-close" id="mobileSheetClose" aria-label="Fechar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-sheet-content">
+        <!-- Color Selection -->
+        <div class="mobile-sheet-section">
+          <h4 class="mobile-sheet-section-title">Selecione a Cor</h4>
+          <div class="mobile-sheet-colors" id="mobileSheetColors">
+            <button class="mobile-sheet-color-option active" data-color="Padrao">
+              <span class="color-circle" style="background-color: #1a1a1a;"></span>
+              <span class="color-name">Padrao</span>
+            </button>
+            <button class="mobile-sheet-color-option" data-color="Azul">
+              <span class="color-circle" style="background-color: #2563eb;"></span>
+              <span class="color-name">Azul</span>
+            </button>
+            <button class="mobile-sheet-color-option" data-color="Vermelho">
+              <span class="color-circle" style="background-color: #dc2626;"></span>
+              <span class="color-name">Vermelho</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Description -->
+        <div class="mobile-sheet-section">
+          <h4 class="mobile-sheet-section-title">Descricao</h4>
+          <p class="mobile-sheet-description" id="mobileSheetDescription">Produto de alta qualidade. Ideal para profissionais e entusiastas que buscam o melhor em materiais de construcao.</p>
+        </div>
+        
+        <!-- Specifications -->
+        <div class="mobile-sheet-section">
+          <h4 class="mobile-sheet-section-title">Caracteristicas</h4>
+          <div class="mobile-sheet-specs">
+            <div class="mobile-sheet-spec">
+              <span class="spec-label">Cor</span>
+              <span class="spec-value" id="mobileSheetSpecColor">Padrao</span>
+            </div>
+            <div class="mobile-sheet-spec">
+              <span class="spec-label">Marca</span>
+              <span class="spec-value" id="mobileSheetSpecBrand">Bosch</span>
+            </div>
+            <div class="mobile-sheet-spec">
+              <span class="spec-label">Categoria</span>
+              <span class="spec-value" id="mobileSheetSpecCategory">Ferramentas</span>
+            </div>
+            <div class="mobile-sheet-spec">
+              <span class="spec-label">Garantia</span>
+              <span class="spec-value">12 meses</span>
+            </div>
+            <div class="mobile-sheet-spec">
+              <span class="spec-label">Origem</span>
+              <span class="spec-value">Produto original</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-sheet-footer">
+        <button class="mobile-sheet-add-cart" id="mobileSheetAddCart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer" id="contato">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="#" class="logo">
+              <div class="logo-icon">FP</div>
+              <span class="logo-text">Fix<span>Prime</span></span>
+            </a>
+            <p class="footer-about-text">Ha mais de 15 anos oferecendo os melhores materiais de construcao com qualidade e precos justos. Sua obra comeca aqui!</p>
+            <div class="footer-social">
+              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+              <a href="https://instagram.com/fixprime" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com/fixprime" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-title">Links Rapidos</h3>
+            <ul class="footer-links">
+              <li><a href="#home">Inicio</a></li>
+              <li><a href="#produtos">Produtos</a></li>
+              <li><a href="#marcas">Marcas</a></li>
+              <li><a href="#ofertas">Ofertas</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Categorias</h3>
+            <ul class="footer-links">
+              <li><a href="#">Ferramentas</a></li>
+              <li><a href="#">Material Eletrico</a></li>
+              <li><a href="#">Material Hidraulico</a></li>
+              <li><a href="#">Tintas e Acabamentos</a></li>
+              <li><a href="#">Iluminacao</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Contato</h3>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Av. das Industrias, 1500<br>Centro, Sao Paulo - SP</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>(11) 3000-0000</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>contato@fixprime.com.br</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Seg - Sab: 8h as 18h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">2026 FixPrime - Todos os direitos reservados</p>
+          <div class="footer-legal">
+            <a href="#">Politica de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Floating Social Buttons -->
+  <div class="floating-social" id="floatingSocial">
+    <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" aria-label="WhatsApp">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a href="https://instagram.com/fixprime" target="_blank" rel="noopener noreferrer" class="floating-btn instagram" aria-label="Instagram">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
